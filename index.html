@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Valamkottil Textiles & Readymades – Premium family textile shop in Pattimattom, Ernakulam. Sarees, cotton fabrics & readymades for men, women and kids.">
+<title>Valamkottil Textiles & Readymades</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+:root{--primary:#2fa36b;--dark:#0f3d2e;--light:#f3faf7;--text:#1f2937;--card:#ffffff;--muted:#6b7280}
+body.dark{--primary:#4ade80;--dark:#052e1f;--light:#071a13;--text:#e5f7ef;--card:#0f2f23;--muted:#9ddbc0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:var(--light);color:var(--text);transition:.3s}
+.container{width:92%;max-width:1300px;margin:auto}
+header{background:rgba(15,61,46,.96);position:sticky;top:0;z-index:100}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{display:flex;align-items:center;gap:14px}
+.logo img{height:80px}
+nav ul{display:flex;list-style:none;gap:22px}
+nav a{color:#fff;text-decoration:none}
+nav a:hover{color:var(--primary)}
+.dark-toggle{background:var(--primary);border:none;color:#fff;padding:6px 12px;border-radius:20px;cursor:pointer}
+section{padding:70px 0}
+.section-title{text-align:center;font-family:'Playfair Display',serif;font-size:2.2rem}
+.section-sub{text-align:center;color:var(--muted);margin-bottom:40px}
+.hero{padding:90px 0;background:linear-gradient(120deg,var(--dark),#0a5c3f);color:#fff}
+.hero h1{font-family:'Playfair Display',serif;font-size:3rem;color:#9fffd0}
+.btn{background:var(--primary);color:#fff;padding:10px 22px;border-radius:25px;border:none;cursor:pointer;text-decoration:none}
+.tiles,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.tile,.card{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 8px 18px rgba(0,0,0,.12);transition:.3s}
+.tile:hover,.card:hover{transform:translateY(-6px)}
+.tile img,.card img{width:100%;height:200px;object-fit:cover}
+.tile-overlay{padding:15px;font-weight:600}
+.brand-strip{background:var(--dark);color:#c7f5df;padding:40px 0;text-align:center}
+.about-box{max-width:900px;margin:auto;font-family:Merriweather,serif;line-height:1.9}
+footer{background:var(--dark);color:#c7f5df;text-align:center;padding:40px}
+
+/* SHOP */
+#shop .categories{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:25px}
+.cat-btn{padding:6px 14px;border-radius:20px;border:1px solid var(--primary);background:transparent;color:var(--primary);cursor:pointer}
+.cat-btn.active,.cat-btn:hover{background:var(--primary);color:#fff}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.product{background:var(--card);padding:10px;border-radius:14px;box-shadow:0 6px 15px rgba(0,0,0,.12)}
+.product img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+.product h4{margin:8px 0}
+.price{color:var(--primary);font-weight:600}
+.cart-box{position:fixed;top:0;right:-380px;width:360px;height:100%;background:var(--card);box-shadow:-5px 0 20px rgba(0,0,0,.2);padding:20px;transition:.4s;z-index:200}
+.cart-box.open{right:0}
+.cart-item{display:flex;justify-content:space-between;margin:8px 0}
+.whatsapp-float{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none}
+@media(max-width:600px){nav ul{display:none}}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav>
+<div class="logo"><img src="logo.png"><strong style="color:#9fffd0">Valamkottil</strong></div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#collections">Collections</a></li>
+<li><a href="#shop">Shop</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button class="dark-toggle" onclick="toggleDark()">🌙</button>
+</nav>
+</div>
+</header>
+
+<section id="home" class="hero">
+<div class="container">
+<h1>Premium Textiles & Readymades</h1>
+<p>Complete family fashion & textile destination in Pattimattom</p>
+<a class="btn" href="#shop">Shop Now</a>
+</div>
+</section>
+
+<section id="collections">
+<div class="container">
+<h2 class="section-title">Our Collections</h2>
+<p class="section-sub">Clothing for every age & occasion</p>
+<div class="tiles">
+<div class="tile"><img src="shope.jpg"><div class="tile-overlay">Sarees</div></div>
+<div class="tile"><img src="shop.webp"><div class="tile-overlay">Men Wear</div></div>
+<div class="tile"><img src="2025-08-16.webp"><div class="tile-overlay">Kids Wear</div></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+<h2 class="section-title">About Us</h2>
+<p class="section-sub">A tradition of quality & trust</p>
+<div class="about-box">
+Valamkottil Textiles and Readymades is a family‑owned textile showroom in Pattimattom offering sarees, dhoties, innerwear, men, women & kids wear, party & casual clothing, shirtings, suitings, running materials, tailoring accessories, Hajj & Umrah items and trusted brands like Ramraj, Jockey, Otto and more.
+
+Online ordering facility coming with WhatsApp checkout.
+</div>
+</div>
+</section>
+
+<section id="shop">
+<div class="container">
+<h2 class="section-title">Shop Online (Demo)</h2>
+<p class="section-sub">Add to cart & order via WhatsApp</p>
+
+<div class="categories" id="categories"></div>
+<div class="products" id="products"></div>
+
+<button class="btn" onclick="toggleCart()">View Cart 🛒</button>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact Us</h2>
+<p class="section-sub">Pattimattom Junction, Ernakulam</p>
+<p>📞 +91 80910 55155 | 💬 WhatsApp orders available</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Valamkottil Textiles</p>
+</footer>
+
+<a href="https://wa.me/918091055155" class="whatsapp-float">💬</a>
+
+<div class="cart-box" id="cartBox">
+<h3>Your Cart</h3>
+<div id="cartItems"></div>
+<button class="btn" onclick="checkoutWhatsApp()">Checkout via WhatsApp</button>
+<button class="btn" style="background:#999;margin-top:10px" onclick="toggleCart()">Close</button>
+</div>
+
+<script>
+// ---------------- Data ----------------
+const productsData = [
+  { id:1, name:"Silk Saree", cat:"Sarees", price:"Contact for price", img:"shope.jpg"},
+  { id:2, name:"Cotton Saree", cat:"Sarees", price:"₹1200", img:"shop.webp"},
+  { id:3, name:"Men Shirt", cat:"Men Wear", price:"₹850", img:"2025-08-16.webp"},
+  { id:4, name:"Kids Dress", cat:"Kids Wear", price:"Contact for price", img:"shope.jpg"},
+  { id:5, name:"Innerwear Set", cat:"Innerwear", price:"₹499", img:"shop.webp"}
+];
+
+const categories = [...new Set(productsData.map(p=>p.cat))];
+let cart = [];
+
+// ---------------- Rendering ----------------
+function renderCategories(){
+  const el = document.getElementById('categories');
+  // FIXED string escaping here
+  el.innerHTML = '<button class="cat-btn active" onclick="filterCat(\'all\', event)">All</button>';
+  categories.forEach(c => {
+    el.innerHTML += `<button class="cat-btn" onclick="filterCat('${c}', event)">${c}</button>`;
+  });
+}
+
+function renderProducts(list){
+  const el = document.getElementById('products');
+  el.innerHTML = '';
+  list.forEach(p => {
+    el.innerHTML += `<div class="product"><img src="${p.img}"><h4>${p.name}</h4><div class="price">${p.price}</div><button class="btn" onclick="addToCart(${p.id})">Add</button></div>`;
+  });
+}
+
+function filterCat(cat, evt){
+  document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+  if(evt && evt.target) evt.target.classList.add('active');
+  if(cat==='all') renderProducts(productsData);
+  else renderProducts(productsData.filter(p=>p.cat===cat));
+}
+
+// ---------------- Cart ----------------
+function addToCart(id){
+  const p = productsData.find(x=>x.id===id);
+  if(!p) return;
+  cart.push(p);
+  alert(p.name + " added to cart");
+}
+
+function toggleCart(){
+  const box = document.getElementById('cartBox');
+  if(!box) return;
+  box.classList.toggle('open');
+  renderCart();
+}
+
+function renderCart(){
+  const el = document.getElementById('cartItems');
+  el.innerHTML='';
+  cart.forEach(c=>{
+    el.innerHTML += `<div class="cart-item"><span>${c.name}</span><span>${c.price}</span></div>`;
+  });
+  if(cart.length===0) el.innerHTML='Cart is empty';
+}
+
+function checkoutWhatsApp(){
+  let msg='New Order – Valamkottil Textiles%0A%0AItems:%0A';
+  cart.forEach(c=>{ msg += `- ${c.name} (${c.price})%0A`; });
+  msg += '%0APickup/Home Delivery: %0AAddress:';
+  window.open('https://wa.me/918091055155?text=' + msg,'_blank');
+}
+
+// ---------------- UI helpers ----------------
+function toggleDark(){ document.body.classList.toggle('dark'); }
+
+// ---------------- Init ----------------
+renderCategories();
+renderProducts(productsData);
+
+// ---------------- Basic runtime tests ----------------
+(function runTests(){
+  console.assert(typeof toggleCart === 'function', 'toggleCart should be defined');
+  console.assert(Array.isArray(productsData) && productsData.length > 0, 'productsData should not be empty');
+  console.assert(document.getElementById('categories'), '#categories element must exist');
+  console.assert(document.getElementById('products'), '#products element must exist');
+})();
+</script>
+</body>
+</html>
+
